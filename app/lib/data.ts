@@ -10,6 +10,8 @@ import {
 } from './definitions';
 import { formatCurrency } from './utils';
 
+export const dynamic = 'force-dynamic';
+
 export async function fetchRevenue() {
   // Add noStore() here to prevent the response from being cached.
   // This is equivalent to in fetch(..., {cache: 'no-store'}).
@@ -88,6 +90,7 @@ export async function fetchCardData() {
 }
 
 const ITEMS_PER_PAGE = 6;
+
 export async function fetchFilteredInvoices(
   query: string,
   currentPage: number,
